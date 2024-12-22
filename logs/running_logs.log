@@ -1,2 +1,53 @@
 [2024-12-21 11:10:24,137: INFO: main: welcome to our custom log]
 [2024-12-21 11:10:50,015: INFO: main: welcome to our custom log]
+[2024-12-21 14:07:53,099: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:08:01,308: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:09:06,459: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:40:22,924: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:40:28,820: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:49:25,302: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 14:53:41,008: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 15:00:53,998: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-21 15:15:51,322: INFO: common: created directory at: artifacts]
+[2024-12-21 15:15:51,324: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-21 15:15:51,326: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1n7jD1lU3Bi-J1M_JjP863Y_SYgGn5PeJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-12-21 15:19:30,829: INFO: common: created directory at: artifacts]
+[2024-12-21 15:19:30,832: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-21 15:19:30,835: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1n7jD1lU3Bi-J1M_JjP863Y_SYgGn5PeJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-12-21 15:21:41,852: INFO: common: created directory at: artifacts]
+[2024-12-21 15:21:41,854: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-21 15:21:41,856: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1n7jD1lU3Bi-J1M_JjP863Y_SYgGn5PeJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-12-22 14:57:56,131: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-12-22 14:57:56,148: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-22 14:57:56,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-22 14:57:56,152: INFO: common: created directory at: artifacts]
+[2024-12-22 14:57:56,153: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-22 14:57:56,153: ERROR: main: name 'DataIngestion' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\stage_01_data_injestion.py", line 14, in main
+    data_ingestion = DataIngestion(config=data_ingestion_config)
+NameError: name 'DataIngestion' is not defined
+[2024-12-22 14:59:14,184: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-12-22 14:59:14,185: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-22 14:59:14,186: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-22 14:59:14,186: INFO: common: created directory at: artifacts]
+[2024-12-22 14:59:14,187: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-22 14:59:14,187: ERROR: main: name 'DataIngestion' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\stage_01_data_injestion.py", line 14, in main
+    data_ingestion = DataIngestion(config=data_ingestion_config)
+NameError: name 'DataIngestion' is not defined
+[2024-12-22 14:59:25,508: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-12-22 14:59:25,511: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-22 14:59:25,514: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-22 14:59:25,517: INFO: common: created directory at: artifacts]
+[2024-12-22 14:59:25,518: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-22 14:59:25,519: INFO: data_injestion: Downloading data from https://drive.google.com/file/d/1n7jD1lU3Bi-J1M_JjP863Y_SYgGn5PeJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-12-22 15:01:20,076: INFO: data_injestion: Downloaded data from https://drive.google.com/file/d/1n7jD1lU3Bi-J1M_JjP863Y_SYgGn5PeJ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-12-22 15:01:34,684: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
