@@ -4,27 +4,36 @@ from tensorflow.keras.preprocessing import image
 import os
 
 
-
 class PredictionPipeline:
-    def __init__(self,filename):
-        self.filename =filename
+    def __init__(self, filename):
+        self.filename = filename
 
-
-    
     def predict(self):
-        # load model
-        model = load_model(os.path.join("model", "model.h5"))
+        # Load the trained model
+        model_path = os.path.join("model", "model.h5")
+        model = load_model(model_path)
 
+        # Preprocess the input image
         imagename = self.filename
-        test_image = image.load_img(imagename, target_size = (224,224))
+        test_image = image.load_img(imagename, target_size=(224, 224))
         test_image = image.img_to_array(test_image)
-        test_image = np.expand_dims(test_image, axis = 0)
-        result = np.argmax(model.predict(test_image), axis=1)
-        print(result)
+        test_image = test_image / 255.0  # Normalize to [0, 1]
+        test_image = np.expand_dims(test_image, axis=0)  # Add batch dimension
 
-        if result[0] == 1:
-            prediction = 'Tumor'
-            return [{ "image" : prediction}]
+        # Make predictions
+        predictions = model.predict(test_image)
+        confidence = float(np.max(predictions))  # Highest confidence score
+        result = int(np.argmax(predictions, axis=1)[0])  # Predicted class index
+
+        # Define confidence threshold
+        threshold = 0.90  # Adjust this threshold based on your model
+
+        # Classification based on confidence
+        if confidence >= threshold:
+            if result == 1:
+                prediction = "Tumor"
+            else:
+                prediction = "Normal"
+            return [{"image": prediction, "confidence": confidence}]
         else:
-            prediction = 'Normal'
-            return [{ "image" : prediction}]
+            return [{"error": "Invalid input, please specify a valid image."}]
