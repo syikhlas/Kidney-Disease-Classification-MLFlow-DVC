@@ -469,3 +469,4 @@ OSError: No file or directory found at model\model.h5
 [2025-01-03 13:48:42,613: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2025-01-03 13:48:53,004: INFO: _internal: 127.0.0.1 - - [03/Jan/2025 13:48:53] "GET / HTTP/1.1" 200 -]
 [2025-01-03 13:49:18,642: INFO: _internal: 127.0.0.1 - - [03/Jan/2025 13:49:18] "POST /predict HTTP/1.1" 200 -]
+[2025-01-03 13:53:23,419: INFO: _internal: 127.0.0.1 - - [03/Jan/2025 13:53:23] "POST /predict HTTP/1.1" 200 -]
