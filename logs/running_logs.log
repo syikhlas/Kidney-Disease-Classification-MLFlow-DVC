@@ -801,3 +801,41 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2025-04-09 23:39:30,258: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:30] "POST /predict HTTP/1.1" 200 -]
 [2025-04-09 23:39:42,565: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:42] "POST /predict HTTP/1.1" 200 -]
 [2025-04-09 23:41:27,050: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:41:27] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:41:49,887: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-04-09 23:41:51,058: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.107:8080]
+[2025-04-09 23:41:51,059: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-09 23:41:54,053: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:41:54] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:41:59,082: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:41:59] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:42:12,404: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:42:12] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:42:38,706: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\prediction.py", line 18, in predict
+    test_image = image.load_img(imagename, target_size=(224, 224))
+  File "C:\Users\admin\anaconda3\lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\admin\anaconda3\lib\site-packages\PIL\Image.py", line 3536, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x00000209DB011450>
+[2025-04-09 23:42:38,716: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:42:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-09 23:42:42,494: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:42:42] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:43:05,932: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:43:05] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:43:19,518: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:43:19] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:43:33,678: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000209DAE5AD30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-04-09 23:43:33,682: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:43:33] "POST /predict HTTP/1.1" 200 -]
