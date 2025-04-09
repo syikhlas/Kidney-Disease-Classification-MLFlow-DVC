@@ -790,3 +790,14 @@ Traceback (most recent call last):
     raise UnidentifiedImageError(msg)
 PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000002834D68CE50>
 [2025-04-09 23:37:40,316: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-09 23:39:11,091: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-04-09 23:39:12,027: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.107:8080]
+[2025-04-09 23:39:12,028: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-09 23:39:16,098: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:16] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:39:21,798: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:21] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:39:30,258: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:30] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:39:42,565: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:39:42] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:41:27,050: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:41:27] "POST /predict HTTP/1.1" 200 -]

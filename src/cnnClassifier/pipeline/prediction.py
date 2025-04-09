@@ -3,7 +3,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import os
 
-
 class PredictionPipeline:
     def __init__(self, filename):
         self.filename = filename
@@ -20,22 +19,23 @@ class PredictionPipeline:
         test_image = test_image / 255.0  # Normalize to [0, 1]
         test_image = np.expand_dims(test_image, axis=0)  # Add batch dimension
 
-        # Make predictions
-        predictions = model.predict(test_image)
-        confidence = float(np.max(predictions))  # Highest confidence score
-        result = int(np.argmax(predictions, axis=1)[0])  # Predicted class index
+        # Check if image is valid or blank
+        if test_image.std() < 0.01:
+            return [{"error": "Image appears to be blank or invalid."}]
 
-        # Define confidence threshold
-        threshold = 0.80 # Adjust this threshold based on your model
-        
-        
+        # Make prediction
+        prediction = model.predict(test_image)
+        confidence = float(prediction[0][0])  # Tumor probability
 
-        # Classification based on confidence
-        if confidence >= threshold:
-            if result == 1:
-                prediction = "Tumor"
-            else:
-                prediction = "Normal"
-            return [{"image": prediction, "confidence": confidence}]
+        # Define threshold for classification
+        threshold = 0.5  # Standard threshold for binary classification
+
+        # Classification logic
+        if 0.3 <= confidence <= 0.7:
+            label = "Uncertain or Invalid Image"
+        elif confidence > threshold:
+            label = "Tumor"
         else:
-            return [{"error": "Invalid input, please specify a valid image.","confidence":confidence}]
+            label = "Normal"
+
+        return [{"image": label, "confidence": confidence}]
