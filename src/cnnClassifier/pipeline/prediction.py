@@ -26,7 +26,7 @@ class PredictionPipeline:
         result = int(np.argmax(predictions, axis=1)[0])  # Predicted class index
 
         # Define confidence threshold
-        threshold = 0.90  # Adjust this threshold based on your model
+        threshold = 0.80  # Adjust this threshold based on your model
 
         # Classification based on confidence
         if confidence >= threshold:

@@ -677,3 +677,11 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2025-02-05 14:36:26,197: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2025-02-05 14:36:58,987: INFO: _internal: 127.0.0.1 - - [05/Feb/2025 14:36:58] "GET / HTTP/1.1" 200 -]
 [2025-02-05 14:38:11,448: INFO: _internal: 127.0.0.1 - - [05/Feb/2025 14:38:11] "POST /predict HTTP/1.1" 200 -]
+[2025-02-18 10:25:08,146: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-02-18 10:25:08,951: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.103:8080]
+[2025-02-18 10:25:08,953: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-02-18 10:25:33,164: INFO: _internal: 127.0.0.1 - - [18/Feb/2025 10:25:33] "GET / HTTP/1.1" 200 -]
+[2025-02-18 10:26:20,170: INFO: _internal: 127.0.0.1 - - [18/Feb/2025 10:26:20] "POST /predict HTTP/1.1" 200 -]
