@@ -38,4 +38,4 @@ class PredictionPipeline:
                 prediction = "Normal"
             return [{"image": prediction, "confidence": confidence}]
         else:
-            return [{"error": "Invalid input, please specify a valid image."}]
+            return [{"error": "Invalid input, please specify a valid image.","confidence":confidence}]
