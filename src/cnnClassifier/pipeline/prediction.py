@@ -26,14 +26,30 @@ class PredictionPipeline:
         result = int(np.argmax(predictions, axis=1)[0])  # Predicted class index
 
         # Define confidence threshold
-        threshold = 0.80  # Adjust this threshold based on your model
+        # threshold = 0.80 # Adjust this threshold based on your model
+        # Define confidence threshold
+        threshold = 0.80  # Adjust as needed (try lowering to 0.5 if model is underconfident)
 
-        # Classification based on confidence
+        # Get model prediction — assuming prediction is a 2D array
+        confidence = float(prediction[0][0])  # Tumor probability
+
+        # Classify based on confidence
         if confidence >= threshold:
-            if result == 1:
-                prediction = "Tumor"
-            else:
-                prediction = "Normal"
-            return [{"image": prediction, "confidence": confidence}]
+            result_label = "Tumor"
         else:
-            return [{"error": "Invalid input, please specify a valid image."}]
+            result_label = "Normal"
+
+        # Return result
+        return [{"image": result_label, "confidence": confidence}]
+
+        
+
+        # # Classification based on confidence
+        # if confidence >= threshold:
+        #     if result == 1:
+        #         prediction = "Tumor"
+        #     else:
+        #         prediction = "Normal"
+        #     return [{"image": prediction, "confidence": confidence}]
+        # else:
+        #     return [{"error": "Invalid input, please specify a valid image."}]
