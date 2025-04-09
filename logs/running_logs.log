@@ -716,3 +716,77 @@ PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x
 [2025-04-09 23:26:55,531: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2025-04-09 23:27:03,315: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:27:03] "GET / HTTP/1.1" 200 -]
 [2025-04-09 23:27:09,969: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:27:09] "POST /predict HTTP/1.1" 200 -]
+[2025-04-09 23:36:35,523: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-04-09 23:36:36,688: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.107:8080]
+[2025-04-09 23:36:36,688: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-09 23:36:45,300: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:36:45] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:36:49,911: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\prediction.py", line 34, in predict
+    confidence = float(prediction[0][0])  # Tumor probability
+NameError: name 'prediction' is not defined
+[2025-04-09 23:36:49,918: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:36:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-09 23:37:05,774: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:05] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:37:06,759: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:06] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:37:15,349: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\prediction.py", line 34, in predict
+    confidence = float(prediction[0][0])  # Tumor probability
+NameError: name 'prediction' is not defined
+[2025-04-09 23:37:15,351: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:15] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-04-09 23:37:36,163: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:36] "GET / HTTP/1.1" 200 -]
+[2025-04-09 23:37:40,310: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\admin\anaconda3\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\admin\OneDrive\Desktop\7th Sem Project\Kidney-Disease-Classification-MLFlow-DVC\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\admin\onedrive\desktop\7th sem project\kidney-disease-classification-mlflow-dvc\src\cnnClassifier\pipeline\prediction.py", line 18, in predict
+    test_image = image.load_img(imagename, target_size=(224, 224))
+  File "C:\Users\admin\anaconda3\lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\admin\anaconda3\lib\site-packages\PIL\Image.py", line 3536, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x000002834D68CE50>
+[2025-04-09 23:37:40,316: INFO: _internal: 127.0.0.1 - - [09/Apr/2025 23:37:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
