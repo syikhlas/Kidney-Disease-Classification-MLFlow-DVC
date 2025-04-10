@@ -28,14 +28,14 @@ class PredictionPipeline:
         confidence = float(prediction[0][0])  # Tumor probability
 
         # Define threshold for classification
-        threshold = 0.5  # Standard threshold for binary classification
+        threshold = 0.7  # Standard threshold for binary classification
 
         # Classification logic
         if 0.3 <= confidence <= 0.7:
             label = "Uncertain or Invalid Image"
         elif confidence > threshold:
-            label = "Tumor"
-        else:
             label = "Normal"
+        else:
+            label = "Tumor"
 
         return [{"image": label, "confidence": confidence}]
