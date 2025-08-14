@@ -1,4 +1,7 @@
 # Kidney-Disease-Classification-MLFlow-DVC
+**Contributors:** Ikhlas Syed, Salah Uddin
+
+Developed collaboratively for our major project
 
 
 ## Workflows
