@@ -1,7 +1,9 @@
 # Kidney-Disease-Classification-MLFlow-DVC
 **Contributors:** Ikhlas Syed, Salah Uddin
 
-Developed collaboratively for our major project
+<small>Developed collaboratively for our major project</small>
+
+[Major Project Document.pdf](https://github.com/syikhlas/Kidney-Disease-Classification-MLFlow-DVC/blob/main/Major%20Project%20Document.pdf)
 
 
 ## Workflows
